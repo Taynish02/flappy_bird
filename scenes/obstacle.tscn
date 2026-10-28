@@ -8,6 +8,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohf2h"]
 size = Vector2(72, 9431)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drdry"]
+size = Vector2(72, 3640)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1lo2"]
+size = Vector2(20, 125)
+
 [node name="Obstacle" type="CharacterBody2D" unique_id=165732739]
 script = ExtResource("1_7ukg5")
 
@@ -27,8 +33,21 @@ position = Vector2(0, -4475.5)
 shape = SubResource("RectangleShape2D_ohf2h")
 
 [node name="PipeBottom" type="Area2D" parent="." unique_id=195902940]
+position = Vector2(0, 300)
 
 [node name="Sprite2D" type="Sprite2D" parent="PipeBottom" unique_id=1828514752]
 texture = ExtResource("2_drdry")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PipeBottom" unique_id=1690521932]
+position = Vector2(0, 1580)
+shape = SubResource("RectangleShape2D_drdry")
+
+[node name="ScoreArea" type="Area2D" parent="." unique_id=1951034673]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreArea" unique_id=1699049798]
+position = Vector2(29, 1)
+shape = SubResource("RectangleShape2D_u1lo2")
+
+[connection signal="body_entered" from="PipeTop" to="." method="_on_pipe_body_entered"]
+[connection signal="body_entered" from="PipeBottom" to="." method="_on_pipe_body_entered"]
+[connection signal="body_entered" from="ScoreArea" to="." method="_on_score_area_body_entered"]

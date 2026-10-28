@@ -1,6 +1,8 @@
 extends RigidBody2D
 class_name Player
 
+signal game_started
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var started := false
@@ -31,6 +33,7 @@ func _physics_process(_delta: float) -> void:
 func start_game() -> void:
 	started = true
 	gravity_scale = 1.0
+	game_started.emit()
 
 func flap() -> void:
 	linear_velocity.y = flap_force
