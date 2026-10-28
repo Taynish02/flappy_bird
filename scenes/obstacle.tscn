@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://dd2uyn5qny0jq"]
 
 [ext_resource type="Script" uid="uid://dssdwliuvnxat" path="res://scripts/obstacle.gd" id="1_7ukg5"]
+[ext_resource type="Texture2D" uid="uid://ckrckno77yqxq" path="res://assets/flappy_assets/textures/pipe.png" id="2_drdry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1v2he"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohf2h"]
+size = Vector2(72, 9431)
 
 [node name="Obstacle" type="CharacterBody2D" unique_id=165732739]
 script = ExtResource("1_7ukg5")
@@ -10,3 +14,14 @@ script = ExtResource("1_7ukg5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1344817539]
 shape = SubResource("RectangleShape2D_1v2he")
 disabled = true
+
+[node name="PipeTop" type="Area2D" parent="." unique_id=1535353372]
+position = Vector2(0, -300)
+
+[node name="Sprite2D" type="Sprite2D" parent="PipeTop" unique_id=518839252]
+texture = ExtResource("2_drdry")
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PipeTop" unique_id=247645457]
+position = Vector2(0, -4475.5)
+shape = SubResource("RectangleShape2D_ohf2h")
