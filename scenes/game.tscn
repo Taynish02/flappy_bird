@@ -23,4 +23,5 @@ position = Vector2(0, 686)
 [node name="Player" parent="." unique_id=1415824101 instance=ExtResource("2_lnu2h")]
 position = Vector2(82, 420)
 
+[connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="game_started" from="Player" to="." method="_on_player_game_started"]
