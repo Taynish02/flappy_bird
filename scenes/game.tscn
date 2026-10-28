@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bbkwi8g1lv4g5"]
+
+[ext_resource type="Texture2D" uid="uid://by1t8gwtcwopm" path="res://assets/flappy_assets/textures/background.png" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://b8nimb5anw8sy" path="res://scenes/player.tscn" id="2_lnu2h"]
+
+[node name="Game" type="Node2D" unique_id=1419864342]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=188672476]
+position = Vector2(240, 427)
+texture = ExtResource("1_yqjtg")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." unique_id=1415824101 instance=ExtResource("2_lnu2h")]
+position = Vector2(72, 434)
