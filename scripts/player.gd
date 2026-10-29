@@ -17,7 +17,7 @@ var maxmimum_rotation_down := 90.0
 var falling_angular_velocity = 5.0
 
 func _physics_process(_delta: float) -> void:
-	if Input.is_action_just_pressed("flap") && is_alive:
+	if Input.is_action_just_pressed("flap")&& is_alive:
 		if !started:
 			start_game()
 		flap()
