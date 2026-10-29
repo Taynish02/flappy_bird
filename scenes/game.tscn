@@ -5,9 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://b8nimb5anw8sy" path="res://scenes/player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://vecp3351bi4q" path="res://scenes/obstacle_spawner.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://bkiw27bj8lqls" path="res://scenes/ground.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bpp0u7c8c3mht" path="res://scenes/hud.tscn" id="6_p57ef"]
 
 [node name="Game" type="Node2D" unique_id=1419864342]
 script = ExtResource("1_lbhrr")
+
+[node name="HUD" parent="." unique_id=778439373 instance=ExtResource("6_p57ef")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=188672476]
 position = Vector2(240, 427)

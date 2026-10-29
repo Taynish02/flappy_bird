@@ -1,6 +1,22 @@
 [gd_scene format=3 uid="uid://bpp0u7c8c3mht"]
 
 [ext_resource type="Script" uid="uid://b1dw7jw5mtwui" path="res://scripts/hud.gd" id="1_ahhtf"]
+[ext_resource type="FontFile" uid="uid://5xfswoc87esx" path="res://assets/flappy_assets/fonts/flappyfont.TTF" id="2_oo0fn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1v2he"]
+font = ExtResource("2_oo0fn")
+font_size = 48
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
 
 [node name="HUD" type="CanvasLayer" unique_id=778439373]
 script = ExtResource("1_ahhtf")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1991020285]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 111.0
+grow_horizontal = 2
+text = "999"
+label_settings = SubResource("LabelSettings_1v2he")
+horizontal_alignment = 1
