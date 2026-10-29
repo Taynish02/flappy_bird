@@ -18,8 +18,4 @@ func hide_start_message() -> void:
 func show_game_over_screen(score: int, high_score: int) -> void:
 	game_over_screen.init_screen(score, high_score)
 	
-	game_over_screen.modulate.a = 0.0
 	game_over_screen.visible = true
-	
-	var tween: Tween = get_tree().create_tween()
-	tween.tween_property(game_over_screen, "modulate:a", 1.0, 0.5) 
