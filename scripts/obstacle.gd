@@ -16,6 +16,7 @@ func _on_pipe_body_entered(body: Node2D) -> void:
 func _on_score_area_body_entered(body: Node2D) -> void:
 	if body is Player:
 		print ("Player scored!")
+		body.score_point()
 
 func stop() -> void:
 	speed = 0.0

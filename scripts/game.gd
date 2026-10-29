@@ -14,4 +14,5 @@ func _on_player_died() -> void:
 	get_tree().call_group("obstacles", "stop")
 
 func _on_player_scored() -> void:
-	pass # Replace with function body.
+	score += 1
+	print(score)	
