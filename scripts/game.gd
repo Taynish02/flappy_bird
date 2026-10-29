@@ -10,3 +10,4 @@ func _on_player_died() -> void:
 	obstacle_spawner.stop()
 	ground.animation_player.pause()
 	get_tree().call_group("obstacles", "stop")
+	print("Player died!")
