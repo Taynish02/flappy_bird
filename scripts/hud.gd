@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @onready var score_label: Label = $ScoreLabel
 @onready var start_message: TextureRect = $ScoreLabel/StartMessage
-@onready var game_over_screen: Control = $ScoreLabel/StartMessage/GameOverScreen
+@onready var game_over_screen: Control = $GameOverScreen
 
 func _ready() -> void:
 	start_message.visible = true
