@@ -3,6 +3,7 @@ class_name Player
 
 signal game_started
 signal died
+signal scored
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -46,3 +47,7 @@ func die() -> void:
 	if is_alive:
 		is_alive = false
 		died.emit()
+
+func score_point() -> void:
+	if is_alive:
+		scored.emit()
