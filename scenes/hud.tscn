@@ -19,7 +19,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 111.0
 grow_horizontal = 2
-text = "999"
+text = "0"
 label_settings = SubResource("LabelSettings_1v2he")
 horizontal_alignment = 1
 
@@ -39,7 +39,9 @@ grow_vertical = 2
 texture = ExtResource("3_5ysmq")
 
 [node name="GameOverScreen" parent="." unique_id=1119568275 instance=ExtResource("4_6fi6k")]
-modulate = Color(1.2502502, 1.2502502, 1.2502502, 1)
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
 offset_left = 8.0
 offset_top = 56.0
 offset_right = 8.0
