@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bmyft3ihqo1sk" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://c6mt1frrrlep" path="res://assets/flappy_assets/textures/bird.png" id="2_g2els"]
+[ext_resource type="AudioStream" uid="uid://dbelmjqy5u7kn" path="res://assets/flappy_assets/audio/wing.wav" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://bieq1b22jqpce" path="res://assets/flappy_assets/audio/hit.wav" id="4_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://bivkqgmkfs4ew" path="res://assets/flappy_assets/audio/point.wav" id="5_tuyoq"]
 
 [sub_resource type="Animation" id="Animation_qhqgy"]
 length = 0.001
@@ -114,3 +117,12 @@ frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1387024190]
 shape = SubResource("CircleShape2D_g2els")
+
+[node name="FlapSound" type="AudioStreamPlayer" parent="." unique_id=1173553994]
+stream = ExtResource("3_qhqgy")
+
+[node name="HitSound" type="AudioStreamPlayer" parent="." unique_id=2106018612]
+stream = ExtResource("4_qlg0r")
+
+[node name="ScoreSound" type="AudioStreamPlayer" parent="." unique_id=1959199551]
+stream = ExtResource("5_tuyoq")

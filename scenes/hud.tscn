@@ -38,7 +38,9 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_5ysmq")
 
-[node name="GameOverScreen" parent="ScoreLabel/StartMessage" unique_id=1119568275 instance=ExtResource("4_6fi6k")]
-visible = false
+[node name="GameOverScreen" parent="." unique_id=1119568275 instance=ExtResource("4_6fi6k")]
 modulate = Color(1.2502502, 1.2502502, 1.2502502, 1)
-layout_mode = 1
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 8.0
+offset_bottom = 56.0
