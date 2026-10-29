@@ -19,7 +19,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 111.0
 grow_horizontal = 2
-text = "999"
+text = "0"
 label_settings = SubResource("LabelSettings_1v2he")
 horizontal_alignment = 1
 
